@@ -10,7 +10,7 @@ export default function Navcard() {
   return (
     <div>
       <div className={`navcard ${theme === "light" ? "light" : "dark"}`}>
-        <NavLink to="ContactForm">Contact Us Form</NavLink>
+        <NavLink to="./">Contact Us Form</NavLink>
         <NavLink to="ContactEmail">Email</NavLink>
         <NavLink to="ContactLocation">Location</NavLink>
         <NavLink to="ContactPhoneNum">Phone Number</NavLink>

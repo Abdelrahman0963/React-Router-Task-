@@ -22,10 +22,10 @@ export default function App() {
         { path: "about", element: <About /> },
         { path: "Service", element: <Service /> },
         {
-          path: "contact",
+          path: "/contact",
           element: <ContactUs />,
           children: [
-            { path: "ContactForm", element: <ContactForm /> },
+            { index: true, element: <ContactForm /> },
             { path: "ContactEmail", element: <ContactEmail /> },
             { path: "ContactLocation", element: <ContactLocation /> },
             { path: "ContactPhoneNum", element: <ContactPhoneNum /> },
