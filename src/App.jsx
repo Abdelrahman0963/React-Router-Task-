@@ -5,6 +5,10 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Service from "./pages/ServicePage/Service";
+import ContactForm from "./pages/ContactUs/ContactForm";
+import ContactEmail from "./pages/ContactUs/ContactEmail";
+import ContactLocation from "./pages/ContactUs/ContactLocation";
+import ContactPhoneNum from "./pages/ContactUs/ContactPhoneNum";
 import { ThemeProvider } from "./Hooks/ThemeContext/ThemeProvider";
 
 export default function App() {
@@ -16,7 +20,16 @@ export default function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "Service", element: <Service /> },
-        { path: "contact", element: <ContactUs /> },
+        {
+          path: "contact",
+          element: <ContactUs />,
+          children: [
+            { index: true, element: <ContactForm /> },
+            { path: "ContactEmail", element: <ContactEmail /> },
+            { path: "ContactLocation", element: <ContactLocation /> },
+            { path: "ContactPhoneNum", element: <ContactPhoneNum /> },
+          ],
+        },
       ],
     },
     {
