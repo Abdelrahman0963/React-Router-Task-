@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-link {
+  display: flex;
+  gap: 1rem;
+}
+.navbar-link a {
+  text-decoration: none;
+  color: #999;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.navbar-link a.active {
+  color: #000;
+}
+.navbar-link.dark a {
+  color: #e1e1e1ee;
+}
+.navbar-link.dark a.active {
+  color: #fff;
+}
+.btn-login {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.btn-login.dark {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.btn-login span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.themeBtn {
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.themeBtn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
