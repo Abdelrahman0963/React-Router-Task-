@@ -9,6 +9,7 @@ import ContactForm from "./pages/ContactUs/ContactForm";
 import ContactEmail from "./pages/ContactUs/ContactEmail";
 import ContactLocation from "./pages/ContactUs/ContactLocation";
 import ContactPhoneNum from "./pages/ContactUs/ContactPhoneNum";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import { ThemeProvider } from "./Hooks/ThemeContext/ThemeProvider";
 
 export default function App() {
@@ -21,7 +22,7 @@ export default function App() {
         { path: "about", element: <About /> },
         { path: "Service", element: <Service /> },
         {
-          path: "/contact",
+          path: "contact",
           element: <ContactUs />,
           children: [
             { path: "ContactForm", element: <ContactForm /> },
@@ -30,11 +31,11 @@ export default function App() {
             { path: "ContactPhoneNum", element: <ContactPhoneNum /> },
           ],
         },
+        {
+          path: "*",
+          element: <ErrorPage />,
+        },
       ],
-    },
-    {
-      path: "*",
-      element: <h1>404 Not Found</h1>,
     },
   ]);
 
